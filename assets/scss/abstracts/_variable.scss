@@ -1,0 +1,72 @@
+$font-main: "Red Hat Display",
+    sans-serif;
+$fontIcon: "icomoon";
+
+:root {
+    // color
+    --white: #ffffff;
+    --black: #000000;
+    --dark: #353C47;
+    --primary: #0158FF;
+    --primary-rgb: 1, 88, 255;
+    --white-50: #FFFFFF80;
+    --white-64: #FFFFFFA3;
+    --white-32: #ffffff52;
+    --white-16: #FFFFFF29;
+
+    --black-64: #000000A3;
+    --black-32: #00000052;
+    --line-2: #C5CCDC;
+
+    /* Custom */
+    --shadow-1: #0158FF29;
+    --verified: #0158FF;
+    --success: #0043CC;
+    --surface: #E2E7FA;
+}
+
+[data-color-primary="color-primary-1"] {
+    --primary: #0158FF;
+    --primary-rgb: 1, 88, 255;
+}
+
+[data-color-primary="color-primary-2"] {
+    --primary: #f8c736;
+    --primary-rgb: 248, 199, 54;
+}
+
+[data-color-primary="color-primary-3"] {
+    --primary: #f5772e;
+    --primary-rgb: 245, 119, 46;
+
+}
+
+[data-color-primary="color-primary-4"] {
+    --primary: #2ac6f8;
+    --primary-rgb: 42, 198, 248;
+
+}
+
+[data-color-primary="color-primary-5"] {
+    --primary: #8dca37;
+    --primary-rgb: 141, 202, 55;
+
+}
+
+[data-color-primary="color-primary-6"] {
+    --primary: #6c34fa;
+    --primary-rgb: 108, 52, 250;
+
+}
+
+[data-color-primary="color-primary-7"] {
+    --primary: #f14444;
+    --primary-rgb: 241, 68, 68;
+
+}
+
+[data-color-primary="color-primary-8"] {
+    --primary: #e14392;
+    --primary-rgb: 225, 67, 146;
+
+}

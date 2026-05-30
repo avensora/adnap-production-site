@@ -573,19 +573,20 @@ $header_overlap   = true;
         </section>
         <!-- /Award -->
         <!-- Testimonials -->
-        <section class="section-testimonial flat-spacing tf-btn-swiper-main">
-            <h6 class="mini-title text-caption text-white-64 text-center">
+        <section class=”section-testimonial flat-spacing tf-btn-swiper-main”>
+            <h6 class=”mini-title text-caption text-white-64 text-center”>
                 WHAT OUR CLIENTS SAY
             </h6>
-            <div dir="ltr" class="swiper tf-swiper swiper-testimonial" data-preview="2.15" data-tablet="2.2"
-                data-mobile-sm="1.5" data-mobile="1.2" data-loop="true" data-center="true" data-space-lg="40"
-                data-space-md="30" data-space="15" data-init="1">
-                <div class="swiper-wrapper">
-                    <!-- item 1 -->
+            <div dir=”ltr” class=”swiper tf-swiper swiper-testimonial” data-preview=”2.15” data-tablet=”2.2”
+                data-mobile-sm=”1.5” data-mobile=”1.2” data-loop=”true” data-center=”true” data-space-lg=”40”
+                data-space-md=”30” data-space=”15” data-init=”1”>
+                <div class=”swiper-wrapper”>
+
+                    <!-- 1 — James Okoye -->
                     <div class=”swiper-slide”>
                         <div class=”testimonial-v01”>
                             <div class=”tes-author”>
-                                <div class=”author_image”>
+                                <div class=”author_image” style=”aspect-ratio:437/328;overflow:hidden;”>
                                     <img loading=”lazy” width=”437” height=”328”
                                         src=”assets/images/section/tes-v2-1.jpg” alt=”James Okoye”>
                                 </div>
@@ -596,16 +597,16 @@ $header_overlap   = true;
                             </div>
                             <div class=”br-line”></div>
                             <p class=”tes-text text-body-1”>
-                                “ADNAP completely transformed our brand presence. They understood our vision from day one and
-                                delivered a digital identity that genuinely stands out in our market.”
+                                “ADNAP completely transformed our brand presence. They understood our vision from day one and delivered a digital identity that genuinely stands out in our market.”
                             </p>
                         </div>
                     </div>
-                    <!-- item 2 -->
+
+                    <!-- 2 — Sarah Tan -->
                     <div class=”swiper-slide”>
                         <div class=”testimonial-v01”>
                             <div class=”tes-author”>
-                                <div class=”author_image”>
+                                <div class=”author_image” style=”aspect-ratio:437/328;overflow:hidden;”>
                                     <img loading=”lazy” width=”437” height=”328”
                                         src=”assets/images/section/tes-v2-2.jpg” alt=”Sarah Tan”>
                                 </div>
@@ -616,16 +617,16 @@ $header_overlap   = true;
                             </div>
                             <div class=”br-line”></div>
                             <p class=”tes-text text-body-1”>
-                                “The team at ADNAP is exceptional. Our e-commerce site went from a generic template to
-                                a conversion machine. The results speak for themselves — 3× revenue growth in 6 months.”
+                                “The team at ADNAP is exceptional. Our e-commerce site went from a generic template to a conversion machine. The results speak for themselves — 3× revenue growth in 6 months.”
                             </p>
                         </div>
                     </div>
-                    <!-- item 3 -->
+
+                    <!-- 3 — Marcus Reid -->
                     <div class=”swiper-slide”>
                         <div class=”testimonial-v01”>
                             <div class=”tes-author”>
-                                <div class=”author_image”>
+                                <div class=”author_image” style=”aspect-ratio:437/328;overflow:hidden;”>
                                     <img loading=”lazy” width=”437” height=”328”
                                         src=”assets/images/section/tes-v2-3.jpg” alt=”Marcus Reid”>
                                 </div>
@@ -636,39 +637,99 @@ $header_overlap   = true;
                             </div>
                             <div class=”br-line”></div>
                             <p class=”tes-text text-body-1”>
-                                “Working with ADNAP was a game-changer. Professional, fast, and incredibly creative.
-                                They don't just build websites — they build experiences that convert.”
+                                “Working with ADNAP was a game-changer. Professional, fast, and incredibly creative. They don't just build websites — they build experiences that convert.”
                             </p>
                         </div>
                     </div>
-                    <!-- item 4 (loop) -->
+
+                    <!-- 4 — Aisha Rahman -->
                     <div class=”swiper-slide”>
                         <div class=”testimonial-v01”>
                             <div class=”tes-author”>
-                                <div class=”author_image”>
+                                <div class=”author_image” style=”aspect-ratio:437/328;overflow:hidden;”>
                                     <img loading=”lazy” width=”437” height=”328”
-                                        src=”assets/images/section/tes-v2-1.jpg” alt=”James Okoye”>
+                                        src=”assets/images/section/tes-v2-4.jpg” alt=”Aisha Rahman”>
                                 </div>
                                 <div class=”author_info”>
-                                    <h6 class=”info__name text-body-1 letter-space--1”>James Okoye</h6>
-                                    <p class=”info__duty”>CEO, Nexora Technologies</p>
+                                    <h6 class=”info__name text-body-1 letter-space--1”>Aisha Rahman</h6>
+                                    <p class=”info__duty”>CMO, Lumara Health</p>
                                 </div>
                             </div>
                             <div class=”br-line”></div>
                             <p class=”tes-text text-body-1”>
-                                “ADNAP completely transformed our brand presence. They understood our vision from day one and
-                                delivered a digital identity that genuinely stands out in our market.”
+                                “We needed a brand that felt as premium as our product. ADNAP delivered exactly that — cohesive, refined, and built to scale. Our brand recognition has never been stronger.”
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="group-btn-slider">
-                    <div class="lh-1 nav-prev-swiper">
-                        <i class="fs-8 icon icon-arrow-caret-left"></i>
+
+                    <!-- 5 — Daniel Park -->
+                    <div class=”swiper-slide”>
+                        <div class=”testimonial-v01”>
+                            <div class=”tes-author”>
+                                <div class=”author_image” style=”aspect-ratio:437/328;overflow:hidden;”>
+                                    <img loading=”lazy” width=”437” height=”328”
+                                        src=”assets/images/section/tes-v2-5.jpg” alt=”Daniel Park”>
+                                </div>
+                                <div class=”author_info”>
+                                    <h6 class=”info__name text-body-1 letter-space--1”>Daniel Park</h6>
+                                    <p class=”info__duty”>Founder, Stratum Properties</p>
+                                </div>
+                            </div>
+                            <div class=”br-line”></div>
+                            <p class=”tes-text text-body-1”>
+                                “ADNAP rebuilt our entire digital presence from the ground up. The new website is fast, beautiful, and has directly driven a measurable increase in qualified enquiries.”
+                            </p>
+                        </div>
                     </div>
-                    <div class="sw-dot-default tf-sw-pagination"></div>
-                    <div class="lh-1 nav-next-swiper">
-                        <i class="fs-8 icon icon-arrow-caret-right"></i>
+
+                    <!-- 6 — Priya Nair -->
+                    <div class=”swiper-slide”>
+                        <div class=”testimonial-v01”>
+                            <div class=”tes-author”>
+                                <div class=”author_image” style=”aspect-ratio:437/328;overflow:hidden;”>
+                                    <img loading=”lazy” width=”437” height=”328”
+                                        src=”assets/images/section/tes-v2-6.jpg” alt=”Priya Nair”>
+                                </div>
+                                <div class=”author_info”>
+                                    <h6 class=”info__name text-body-1 letter-space--1”>Priya Nair</h6>
+                                    <p class=”info__duty”>Head of Brand, Orbis AI</p>
+                                </div>
+                            </div>
+                            <div class=”br-line”></div>
+                            <p class=”tes-text text-body-1”>
+                                “The 2D animation ADNAP produced for our product launch was flawless. On-brand, on-brief, and delivered ahead of schedule. It's become one of our best-performing content assets.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 7 — Tom Reeves -->
+                    <div class=”swiper-slide”>
+                        <div class=”testimonial-v01”>
+                            <div class=”tes-author”>
+                                <div class=”author_image” style=”aspect-ratio:437/328;overflow:hidden;”>
+                                    <img loading=”lazy” width=”437” height=”328”
+                                        src=”assets/images/section/tes-v2-7.jpg” alt=”Tom Reeves”>
+                                </div>
+                                <div class=”author_info”>
+                                    <h6 class=”info__name text-body-1 letter-space--1”>Tom Reeves</h6>
+                                    <p class=”info__duty”>CEO, Meridian Group</p>
+                                </div>
+                            </div>
+                            <div class=”br-line”></div>
+                            <p class=”tes-text text-body-1”>
+                                “Strategic thinking, exceptional design, and a team that genuinely cares about outcomes. ADNAP isn't a vendor — they're a long-term partner. I wouldn't work with anyone else.”
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class=”group-btn-slider”>
+                    <div class=”lh-1 nav-prev-swiper”>
+                        <i class=”fs-8 icon icon-arrow-caret-left”></i>
+                    </div>
+                    <div class=”sw-dot-default tf-sw-pagination”></div>
+                    <div class=”lh-1 nav-next-swiper”>
+                        <i class=”fs-8 icon icon-arrow-caret-right”></i>
                     </div>
                 </div>
             </div>

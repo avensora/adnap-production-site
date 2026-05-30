@@ -76,32 +76,22 @@
                             </li>
                             <li>
                                 <div class="item">
-                                    <div class="has-sub-menu">
-                                        <a href="#dropdown-menu-1" class="mb-menu-link text-display-1 collapsed" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="dropdown-menu-1">
-                                            <span class="text">Blog</span>
-                                            <div class="infiniteSlide_text_main">
-                                                <div class="infiniteSlide infiniteSlide_text" data-clone="5">
-                                                    <p class="text-body-2 letter-space--1">
-                                                        <span class="text-primary">//</span> Insights
-                                                    </p>
-                                                    <p class="text-body-2 letter-space--1">
-                                                        <span class="text-primary">//</span> Insights
-                                                    </p>
-                                                    <p class="text-body-2 letter-space--1">
-                                                        <span class="text-primary">//</span> Insights
-                                                    </p>
-                                                </div>
+                                    <a href="blog-two-columns.php" class="mb-menu-link text-display-1">
+                                        <span class="text">Blog</span>
+                                        <div class="infiniteSlide_text_main">
+                                            <div class="infiniteSlide infiniteSlide_text" data-clone="5">
+                                                <p class="text-body-2 letter-space--1">
+                                                    <span class="text-primary">//</span> Insights
+                                                </p>
+                                                <p class="text-body-2 letter-space--1">
+                                                    <span class="text-primary">//</span> Insights
+                                                </p>
+                                                <p class="text-body-2 letter-space--1">
+                                                    <span class="text-primary">//</span> Insights
+                                                </p>
                                             </div>
-                                        </a>
-                                        <div id="dropdown-menu-1" class="collapse">
-                                            <ul class="sub-nav-menu">
-                                                <li><a href="blog-standard.php" class="sub-nav-link">Blog Standard</a></li>
-                                                <li><a href="blog-two-columns.php" class="sub-nav-link">Blog Grid 2</a></li>
-                                                <li><a href="blog-three-columns.php" class="sub-nav-link">Blog Grid 3</a></li>
-                                            </ul>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </li>
                             <li>

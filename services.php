@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'ADNAP Services — Brand Strategy, Web Design & Digital Growth';
-$page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, web design & development, and digital growth — with transparent pricing for every stage of growth.';
+$page_title       = 'ADNAP Services — 2D & 3D Animation, Branding, AI Video & Web Design';
+$page_description = 'Explore ADNAP\'s services: 2D animation, 3D animation, branding, AI video generation, and web design & development — built to deliver impact.';
 ?>
 <!DOCTYPE html>
 
@@ -11,22 +11,113 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
 
 <head>
 <?php include __DIR__ . '/partials/head.php'; ?>
+<style>
+/* ── Service link rows ── */
+.svc-list { list-style: none; margin: 0; padding: 0; }
+
+.svc-row {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.svc-row-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+    gap: 16px;
+    transition: padding 0.3s ease;
+}
+.svc-row-left {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    min-width: 0;
+}
+.svc-num {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    color: rgba(255,255,255,0.18);
+    min-width: 48px;
+    transition: color 0.32s ease;
+    flex-shrink: 0;
+}
+.svc-name {
+    font-size: clamp(2rem, 5.5vw, 4.4rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: rgba(255,255,255,0.28);
+    margin: 0;
+    transition: color 0.32s ease;
+    white-space: nowrap;
+}
+.svc-row-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+.svc-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    transition: color 0.32s ease;
+    display: none;
+}
+@media (min-width: 768px) { .svc-tag { display: block; } }
+.svc-arrow {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.32s ease, border-color 0.32s ease, transform 0.32s ease;
+    flex-shrink: 0;
+}
+.svc-arrow .icon {
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    transition: color 0.32s ease;
+    transform: rotate(-45deg);
+    display: block;
+    line-height: 1;
+}
+
+/* Hover */
+.svc-row:hover .svc-name  { color: #fff; }
+.svc-row:hover .svc-num   { color: var(--primary); }
+.svc-row:hover .svc-tag   { color: rgba(255,255,255,0.64); }
+.svc-row:hover .svc-arrow {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: rotate(0deg);
+}
+.svc-row:hover .svc-arrow .icon {
+    color: #fff;
+    transform: rotate(0deg);
+}
+</style>
 </head>
 
 <body class="counter-scroll">
     <canvas class="cursor-trail d-none d-xl-block" id="trail"></canvas>
 
-    <!-- Scroll Top -->
     <button id="goTop">
         <span class="border-progress"></span>
         <span class="ic-wrap">
             <span class="icon icon-arrow-caret-right"></span>
         </span>
     </button>
-    <!-- /Scroll Top -->
 
     <main id="wrapper">
 <?php include __DIR__ . '/partials/nav-header.php'; ?>
+
         <div class="section-page-title">
             <div class="container text-center">
                 <h1 class="page-title fw-semibold effectFade fadeZoom">Services</h1>
@@ -38,294 +129,128 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
             </div>
         </div>
 
-        <!-- Services Intro -->
+        <!-- Intro -->
         <section class="flat-spacing">
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-lg-6">
                         <p class="mini-title text-caption text-white-64 effectFade fadeUp">WHAT WE DO</p>
                         <h2 class="text-display-2 letter-space--3 fw-semibold effectFade fadeUp">
-                            Strategy-led work <br>that delivers results
+                            Built to create.<br>Designed to convert.
                         </h2>
                     </div>
                     <div class="col-lg-5 ms-auto">
                         <p class="text-body-1 text-white-64 effectFade fadeUp">
-                            Every service we offer is designed to work together. Whether you need a brand refresh, a new website, or a full-scale growth strategy — we build forward from a clear outcome.
+                            Every service we offer is built around one goal — making your brand impossible to ignore. Click any service to explore what we deliver.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Accordion -->
-        <section class="section-service-v2 flat-spacing">
+        <!-- Service List -->
+        <section class="flat-spacing" style="padding-top:0;">
             <div class="container">
                 <div class="br-line d-flex"></div>
-                <div class="service-accordion-main" id="service-accordion-main">
-                    <div class="service-accordion_item effectFade fadeUp no-div" role="presentation">
-                        <div class="accordion-action" data-bs-target="#service-1" role="button"
-                            data-bs-toggle="collapse" aria-controls="service-1" aria-expanded="true">
-                            <h5 class="text-display-1 letter-space--3">Brand Strategy</h5>
-                        </div>
-                        <div id="service-1" class="collapse show" data-bs-parent="#service-accordion-main">
-                            <div class="accordion-content">
-                                <div class="image-left">
-                                    <img width="860" height="373" src="assets/images/section/service-4.jpg" alt="Brand Strategy">
-                                </div>
-                                <div class="content-right">
-                                    <p class="number-order text-display-1 fw-medium letter-space--3 text-white-32">01</p>
-                                    <p class="text-body-1 text-white-64 mb-4">
-                                        We build brand identities that are strategically grounded and visually distinctive. Starting from your target audience and market position, we craft a brand system that communicates trust, clarity, and differentiation at every touchpoint.
-                                    </p>
-                                    <ul class="tf-list vertical gap-12 text-body-1">
-                                        <li><span class="text-primary">//</span> Market Positioning</li>
-                                        <li><span class="text-primary">//</span> Visual Identity Design</li>
-                                        <li><span class="text-primary">//</span> Logo & Typography</li>
-                                        <li><span class="text-primary">//</span> Colour Palette Creation</li>
-                                        <li><span class="text-primary">//</span> Brand Guidelines</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-accordion_item effectFade fadeUp no-div" role="presentation">
-                        <div class="accordion-action collapsed" data-bs-target="#service-2" role="button"
-                            data-bs-toggle="collapse" aria-controls="service-2" aria-expanded="false">
-                            <h5 class="text-display-1 letter-space--3">Web Design & Dev</h5>
-                        </div>
-                        <div id="service-2" class="collapse" data-bs-parent="#service-accordion-main">
-                            <div class="accordion-content">
-                                <div class="image-left">
-                                    <img width="860" height="373" src="assets/images/section/service-5.jpg" alt="Web Design">
-                                </div>
-                                <div class="content-right">
-                                    <p class="number-order text-display-1 fw-medium letter-space--3 text-white-32">02</p>
-                                    <p class="text-body-1 text-white-64 mb-4">
-                                        We design and build websites that convert. Every decision — from information architecture to micro-interactions — is made with your user's journey in mind. Fast, responsive, and built to perform.
-                                    </p>
-                                    <ul class="tf-list vertical gap-12 text-body-1">
-                                        <li><span class="text-primary">//</span> UI/UX Design</li>
-                                        <li><span class="text-primary">//</span> Responsive Web Development</li>
-                                        <li><span class="text-primary">//</span> CMS & Webflow Builds</li>
-                                        <li><span class="text-primary">//</span> Landing Page Design</li>
-                                        <li><span class="text-primary">//</span> Performance Optimisation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-accordion_item effectFade fadeUp no-div" role="presentation">
-                        <div class="accordion-action collapsed" data-bs-target="#service-3" role="button"
-                            data-bs-toggle="collapse" aria-controls="service-3" aria-expanded="false">
-                            <h5 class="text-display-1 letter-space--3">Digital Growth</h5>
-                        </div>
-                        <div id="service-3" class="collapse" data-bs-parent="#service-accordion-main">
-                            <div class="accordion-content">
-                                <div class="image-left">
-                                    <img width="860" height="373" src="assets/images/section/service-6.jpg" alt="Digital Growth">
-                                </div>
-                                <div class="content-right">
-                                    <p class="number-order text-display-1 fw-medium letter-space--3 text-white-32">03</p>
-                                    <p class="text-body-1 text-white-64 mb-4">
-                                        Growth that's measurable and sustainable. We deploy data-driven strategies across SEO, paid media, and social to drive qualified traffic and grow your bottom line — month over month.
-                                    </p>
-                                    <ul class="tf-list vertical gap-12 text-body-1">
-                                        <li><span class="text-primary">//</span> SEO & Content Strategy</li>
-                                        <li><span class="text-primary">//</span> Social Media Management</li>
-                                        <li><span class="text-primary">//</span> Paid Media Campaigns</li>
-                                        <li><span class="text-primary">//</span> Analytics & Reporting</li>
-                                        <li><span class="text-primary">//</span> Conversion Optimisation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <ul class="svc-list">
 
-        <!-- Pricing -->
-        <section class="section-pricing type-2 flat-spacing flat-animate-tab">
-            <div class="s-header d-block overflow-hidden">
-                <div class="infiniteSlide infiniteSlide_select_work" data-clone="5">
-                    <p class="text-display-1 letter-space--3 fw-semibold">Our Packages</p>
-                    <div class="icon-app">
-                        <img loading="lazy" width="120" height="120" src="assets/images/item/global.svg" alt="">
-                    </div>
-                    <p class="text-display-1 letter-space--3 fw-semibold">Our Packages</p>
-                    <div class="icon-app">
-                        <img loading="lazy" width="120" height="120" src="assets/images/item/global.svg" alt="">
-                    </div>
-                    <p class="text-display-1 letter-space--3 fw-semibold">Our Packages</p>
-                    <div class="icon-app">
-                        <img loading="lazy" width="120" height="120" src="assets/images/item/global.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <ul class="pricing-tab_btn" role="tablist">
-                    <li class="nav-tab-item" role="presentation">
-                        <a href="#monthly" data-bs-toggle="tab" class="tf-btn-tab active">
-                            <span class="dot-active"></span>
-                            Monthly
+                    <li>
+                        <a href="service-2d-animation.php" class="svc-row effectFade fadeUp no-div">
+                            <div class="svc-row-inner">
+                                <div class="svc-row-left">
+                                    <span class="svc-num">01</span>
+                                    <h3 class="svc-name">2D Animation</h3>
+                                </div>
+                                <div class="svc-row-right">
+                                    <span class="svc-tag">Animation</span>
+                                    <div class="svc-arrow">
+                                        <i class="icon icon-arrow-long-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-line d-flex"></div>
                         </a>
                     </li>
-                    <li class="nav-tab-item" role="presentation">
-                        <a href="#annual" data-bs-toggle="tab" class="tf-btn-tab">
-                            <span class="dot-active"></span>
-                            <span>Annually — <span class="text-primary">Save 20%</span></span>
+
+                    <li>
+                        <a href="service-3d-animation.php" class="svc-row effectFade fadeUp no-div">
+                            <div class="svc-row-inner">
+                                <div class="svc-row-left">
+                                    <span class="svc-num">02</span>
+                                    <h3 class="svc-name">3D Animation</h3>
+                                </div>
+                                <div class="svc-row-right">
+                                    <span class="svc-tag">Animation</span>
+                                    <div class="svc-arrow">
+                                        <i class="icon icon-arrow-long-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-line d-flex"></div>
                         </a>
                     </li>
+
+                    <li>
+                        <a href="service-branding.php" class="svc-row effectFade fadeUp no-div">
+                            <div class="svc-row-inner">
+                                <div class="svc-row-left">
+                                    <span class="svc-num">03</span>
+                                    <h3 class="svc-name">Branding</h3>
+                                </div>
+                                <div class="svc-row-right">
+                                    <span class="svc-tag">Identity</span>
+                                    <div class="svc-arrow">
+                                        <i class="icon icon-arrow-long-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-line d-flex"></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service-ai-video.php" class="svc-row effectFade fadeUp no-div">
+                            <div class="svc-row-inner">
+                                <div class="svc-row-left">
+                                    <span class="svc-num">04</span>
+                                    <h3 class="svc-name">AI Video Generation</h3>
+                                </div>
+                                <div class="svc-row-right">
+                                    <span class="svc-tag">AI Video</span>
+                                    <div class="svc-arrow">
+                                        <i class="icon icon-arrow-long-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-line d-flex"></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service-web-design.php" class="svc-row effectFade fadeUp no-div">
+                            <div class="svc-row-inner">
+                                <div class="svc-row-left">
+                                    <span class="svc-num">05</span>
+                                    <h3 class="svc-name">Web Design & Dev</h3>
+                                </div>
+                                <div class="svc-row-right">
+                                    <span class="svc-tag">Web</span>
+                                    <div class="svc-arrow">
+                                        <i class="icon icon-arrow-long-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="br-line d-flex"></div>
+                        </a>
+                    </li>
+
                 </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active show" id="monthly" role="tabpanel">
-                        <div class="tf-grid-layout md-col-2 lg-col-3">
-                            <div class="wg-plan">
-                                <div class="br-line"></div>
-                                <div class="plan-name letter-space--1 fw-medium">Starter</div>
-                                <h4 class="plan-price">
-                                    $800 <span class="text-body-2 fw-normal text-white-64">/month</span>
-                                </h4>
-                                <p class="plan-desc text-white-64 letter-space--1">
-                                    For startups and small businesses ready to establish a strong online presence.
-                                </p>
-                                <a href="contact.php" class="btn-action tf-btn style-2 style-troke w-100">
-                                    <span class="text-caption fw-medium">GET STARTED</span>
-                                </a>
-                                <ul class="benefit-list tf-list vertical">
-                                    <li class="benefit_title letter-space--1 text-white-64">What's included:</li>
-                                    <li><span>//</span> Brand identity kit</li>
-                                    <li><span>//</span> 5-page website design</li>
-                                    <li><span>//</span> Mobile-first responsive build</li>
-                                    <li><span>//</span> Basic SEO foundation</li>
-                                    <li><span>//</span> 30-day post-launch support</li>
-                                </ul>
-                            </div>
-                            <div class="wg-plan style-2 type-2">
-                                <div class="bg-img bg-img_2">
-                                    <img loading="lazy" width="416" height="625" src="assets/images/item/bg-6.png" alt="">
-                                </div>
-                                <div class="br-line bg-primary"></div>
-                                <div class="plan-name letter-space--1 fw-medium">Growth</div>
-                                <h4 class="plan-price">
-                                    <span><span class="text-primary">$</span>1,600</span>
-                                    <span class="text-body-2 fw-normal text-white-64">/month</span>
-                                </h4>
-                                <p class="plan-desc text-white-64 letter-space--1">
-                                    For growing brands that need full-service digital strategy and execution.
-                                </p>
-                                <a href="contact.php" class="btn-action tf-btn style-2 style-fill w-100 animate-btn animate-dark">
-                                    <span class="text-caption fw-medium">GET STARTED</span>
-                                </a>
-                                <ul class="benefit-list tf-list vertical">
-                                    <li class="benefit_title letter-space--1 text-white-64">What's included:</li>
-                                    <li><span class="text-primary">//</span> Full brand strategy</li>
-                                    <li><span class="text-primary">//</span> Custom web design & dev</li>
-                                    <li><span class="text-primary">//</span> SEO & content strategy</li>
-                                    <li><span class="text-primary">//</span> Social media management</li>
-                                    <li><span class="text-primary">//</span> Monthly performance reports</li>
-                                </ul>
-                            </div>
-                            <div class="wg-plan style-2 type-3">
-                                <div class="bg-img bg-img_1"></div>
-                                <div class="br-line bg-white"></div>
-                                <div class="plan-name letter-space--1 fw-medium">Enterprise</div>
-                                <h4 class="plan-price">
-                                    $3,200 <span class="text-body-2 fw-normal text-white-64">/month</span>
-                                </h4>
-                                <p class="plan-desc text-white-64 letter-space--1">
-                                    For established organisations seeking a fully bespoke, end-to-end digital solution.
-                                </p>
-                                <a href="contact.php" class="btn-action tf-btn style-2 style-fill-white w-100 animate-btn animate-dark">
-                                    <span class="text-caption fw-medium">LET'S TALK</span>
-                                </a>
-                                <ul class="benefit-list tf-list vertical">
-                                    <li class="benefit_title letter-space--1 text-white-64">What's included:</li>
-                                    <li><span>//</span> Everything in Growth</li>
-                                    <li><span>//</span> Paid media campaigns</li>
-                                    <li><span>//</span> Dedicated account manager</li>
-                                    <li><span>//</span> Advanced analytics dashboard</li>
-                                    <li><span>//</span> Priority 24/7 support</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="annual" role="tabpanel">
-                        <div class="tf-grid-layout md-col-2 lg-col-3">
-                            <div class="wg-plan">
-                                <div class="br-line"></div>
-                                <div class="plan-name letter-space--1 fw-medium">Starter</div>
-                                <h4 class="plan-price">
-                                    $7,680 <span class="text-body-2 fw-normal text-white-64">/annual</span>
-                                </h4>
-                                <p class="plan-desc text-white-64 letter-space--1">
-                                    For startups and small businesses ready to establish a strong online presence.
-                                </p>
-                                <a href="contact.php" class="btn-action tf-btn style-2 style-troke w-100">
-                                    <span class="text-caption fw-medium">GET STARTED</span>
-                                </a>
-                                <ul class="benefit-list tf-list vertical">
-                                    <li class="benefit_title letter-space--1 text-white-64">What's included:</li>
-                                    <li><span>//</span> Brand identity kit</li>
-                                    <li><span>//</span> 5-page website design</li>
-                                    <li><span>//</span> Mobile-first responsive build</li>
-                                    <li><span>//</span> Basic SEO foundation</li>
-                                    <li><span>//</span> 30-day post-launch support</li>
-                                </ul>
-                            </div>
-                            <div class="wg-plan style-2 type-2">
-                                <div class="bg-img bg-img_2">
-                                    <img loading="lazy" width="416" height="625" src="assets/images/item/bg-6.png" alt="">
-                                </div>
-                                <div class="br-line bg-primary"></div>
-                                <div class="plan-name letter-space--1 fw-medium">Growth</div>
-                                <h4 class="plan-price">
-                                    <span><span class="text-primary">$</span>15,360</span>
-                                    <span class="text-body-2 fw-normal text-white-64">/annual</span>
-                                </h4>
-                                <p class="plan-desc text-white-64 letter-space--1">
-                                    For growing brands that need full-service digital strategy and execution.
-                                </p>
-                                <a href="contact.php" class="btn-action tf-btn style-2 style-fill w-100 animate-btn animate-dark">
-                                    <span class="text-caption fw-medium">GET STARTED</span>
-                                </a>
-                                <ul class="benefit-list tf-list vertical">
-                                    <li class="benefit_title letter-space--1 text-white-64">What's included:</li>
-                                    <li><span class="text-primary">//</span> Full brand strategy</li>
-                                    <li><span class="text-primary">//</span> Custom web design & dev</li>
-                                    <li><span class="text-primary">//</span> SEO & content strategy</li>
-                                    <li><span class="text-primary">//</span> Social media management</li>
-                                    <li><span class="text-primary">//</span> Monthly performance reports</li>
-                                </ul>
-                            </div>
-                            <div class="wg-plan style-2 type-3">
-                                <div class="bg-img bg-img_1"></div>
-                                <div class="br-line bg-white"></div>
-                                <div class="plan-name letter-space--1 fw-medium">Enterprise</div>
-                                <h4 class="plan-price">
-                                    $30,720 <span class="text-body-2 fw-normal text-white-64">/annual</span>
-                                </h4>
-                                <p class="plan-desc text-white-64 letter-space--1">
-                                    For established organisations seeking a fully bespoke, end-to-end digital solution.
-                                </p>
-                                <a href="contact.php" class="btn-action tf-btn style-2 style-fill-white w-100 animate-btn animate-dark">
-                                    <span class="text-caption fw-medium">LET'S TALK</span>
-                                </a>
-                                <ul class="benefit-list tf-list vertical">
-                                    <li class="benefit_title letter-space--1 text-white-64">What's included:</li>
-                                    <li><span>//</span> Everything in Growth</li>
-                                    <li><span>//</span> Paid media campaigns</li>
-                                    <li><span>//</span> Dedicated account manager</li>
-                                    <li><span>//</span> Advanced analytics dashboard</li>
-                                    <li><span>//</span> Priority 24/7 support</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="d-flex justify-content-center mt-5">
+                    <a href="contact.php" class="tf-btn style-2">+ START YOUR PROJECT</a>
                 </div>
             </div>
         </section>
-        <!-- /Pricing -->
 
         <!-- FAQ -->
         <section class="section-faq type-2 flat-spacing bg-surface">
@@ -334,8 +259,8 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
                     <h2 class="title text-display-2 letter-space--3 text-center text-black effectFade fadeUp">
                         <span class="text">
                             Frequently
-                            <span class="icon"><img loading="lazy" width="80" height="80" src="assets/images/item/global-2.svg" alt="Image"></span>
-                        </span> <br>
+                            <span class="icon"><img loading="lazy" width="80" height="80" src="assets/images/item/global-2.svg" alt=""></span>
+                        </span><br>
                         asked questions
                     </h2>
                 </div>
@@ -348,13 +273,11 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
                                     aria-controls="faq-1" aria-expanded="false">
                                     <span class="accordion-order text-black-64">01</span>
                                     <p class="accordion-text text-black">How long does a typical project take?</p>
-                                    <div class="ic-wrap d-flex">
-                                        <i class="icon icon-arrow-caret-down fs-10 text-black"></i>
-                                    </div>
+                                    <div class="ic-wrap d-flex"><i class="icon icon-arrow-caret-down fs-10 text-black"></i></div>
                                 </div>
                                 <div id="faq-1" class="collapse" data-bs-parent="#accordion-faq_list">
                                     <p class="accordion-content text-black-64">
-                                        Most brand and website projects are completed within 4–8 weeks, depending on scope and revisions. Digital growth retainers begin showing measurable results within 60–90 days. We always agree on a clear timeline before work begins.
+                                        Most brand and animation projects are completed within 4–8 weeks depending on scope and revisions. AI video and web projects can move faster. We always agree on a clear timeline before work begins.
                                     </p>
                                 </div>
                             </div>
@@ -364,9 +287,7 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
                                     aria-controls="faq-2" aria-expanded="true">
                                     <span class="accordion-order text-black-64">02</span>
                                     <p class="accordion-text text-black">Do you work with international clients?</p>
-                                    <div class="ic-wrap d-flex">
-                                        <i class="icon icon-arrow-caret-down fs-10 text-black"></i>
-                                    </div>
+                                    <div class="ic-wrap d-flex"><i class="icon icon-arrow-caret-down fs-10 text-black"></i></div>
                                 </div>
                                 <div id="faq-2" class="collapse show" data-bs-parent="#accordion-faq_list">
                                     <p class="accordion-content text-black-64">
@@ -379,14 +300,12 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
                                     data-bs-target="#faq-3" role="button" data-bs-toggle="collapse"
                                     aria-controls="faq-3" aria-expanded="false">
                                     <span class="accordion-order text-black-64">03</span>
-                                    <p class="accordion-text text-black">What industries do you specialise in?</p>
-                                    <div class="ic-wrap d-flex">
-                                        <i class="icon icon-arrow-caret-down fs-10 text-black"></i>
-                                    </div>
+                                    <p class="accordion-text text-black">Can I combine multiple services?</p>
+                                    <div class="ic-wrap d-flex"><i class="icon icon-arrow-caret-down fs-10 text-black"></i></div>
                                 </div>
                                 <div id="faq-3" class="collapse" data-bs-parent="#accordion-faq_list">
                                     <p class="accordion-content text-black-64">
-                                        We work across technology, e-commerce, finance, healthcare, and professional services. Our strength is adapting our approach to fit the nuances of each industry while maintaining a consistently high standard of craft.
+                                        Yes — most of our clients do. Branding + web design, 2D animation + AI video, or a full-stack creative package are all common. We scope them together so everything stays consistent and cost-efficient.
                                     </p>
                                 </div>
                             </div>
@@ -396,9 +315,7 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
                                     aria-controls="faq-4" aria-expanded="false">
                                     <span class="accordion-order text-black-64">04</span>
                                     <p class="accordion-text text-black">What does the engagement process look like?</p>
-                                    <div class="ic-wrap d-flex">
-                                        <i class="icon icon-arrow-caret-down fs-10 text-black"></i>
-                                    </div>
+                                    <div class="ic-wrap d-flex"><i class="icon icon-arrow-caret-down fs-10 text-black"></i></div>
                                 </div>
                                 <div id="faq-4" class="collapse" data-bs-parent="#accordion-faq_list">
                                     <p class="accordion-content text-black-64">
@@ -411,14 +328,12 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
                                     data-bs-target="#faq-5" role="button" data-bs-toggle="collapse"
                                     aria-controls="faq-5" aria-expanded="false">
                                     <span class="accordion-order text-black-64">05</span>
-                                    <p class="accordion-text text-black">Do you provide ongoing support after launch?</p>
-                                    <div class="ic-wrap d-flex">
-                                        <i class="icon icon-arrow-caret-down fs-10 text-black"></i>
-                                    </div>
+                                    <p class="accordion-text text-black">Do you provide ongoing support after delivery?</p>
+                                    <div class="ic-wrap d-flex"><i class="icon icon-arrow-caret-down fs-10 text-black"></i></div>
                                 </div>
                                 <div id="faq-5" class="collapse" data-bs-parent="#accordion-faq_list">
                                     <p class="accordion-content text-black-64">
-                                        Yes. We offer retainer packages covering website maintenance, performance monitoring, content updates, and ongoing digital marketing. Think of us as your long-term digital partner, not just a one-off vendor.
+                                        Yes. We offer retainer packages covering website maintenance, content updates, additional animation rounds, and ongoing creative support. Think of us as your long-term creative partner.
                                     </p>
                                 </div>
                             </div>
@@ -427,7 +342,6 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
                 </div>
             </div>
         </section>
-        <!-- /FAQ -->
 
 <?php include __DIR__ . '/partials/footer.php'; ?>
     </main>
@@ -436,4 +350,3 @@ $page_description = 'Explore ADNAP\'s full-service offerings: brand strategy, we
 </body>
 
 </html>
-

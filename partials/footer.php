@@ -22,7 +22,7 @@
                                 <li><a href="about.php" class="link letter-space--2 h5">About</a></li>
                                 <li><a href="services.php" class="link letter-space--2 h5">Services</a></li>
                                 <li><a href="portfolio.php" class="link letter-space--2 h5">Portfolio</a></li>
-                                <li><a href="blog-standard.php" class="link letter-space--2 h5">Blog</a></li>
+                                <li><a href="blog-two-columns.php" class="link letter-space--2 h5">Blog</a></li>
                                 <li><a href="contact.php" class="link letter-space--2 h5">Contact</a></li>
                             </ul>
                         </div>

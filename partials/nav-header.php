@@ -14,14 +14,7 @@
                                     <li class="menu-item"><a href="about.php" class="item-link link text-caption"><span>01 /</span>ABOUT</a></li>
                                     <li class="menu-item"><a href="services.php" class="item-link link text-caption"><span>02 /</span>SERVICES</a></li>
                                     <li class="menu-item"><a href="portfolio.php" class="item-link link text-caption"><span>03 /</span>PORTFOLIO</a></li>
-                                    <li class="menu-item has-child">
-                                        <a href="#" class="item-link link text-caption"><span>04 /</span>BLOG</a>
-                                        <ul class="sub-menu">
-                                            <li class="sub-menu-item"><a href="blog-standard.php" class="item-link link text-caption">BLOG STANDARD</a></li>
-                                            <li class="sub-menu-item"><a href="blog-two-columns.php" class="item-link link text-caption">BLOG GRID 2</a></li>
-                                            <li class="sub-menu-item"><a href="blog-three-columns.php" class="item-link link text-caption">BLOG GRID 3</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="menu-item"><a href="blog-two-columns.php" class="item-link link text-caption"><span>04 /</span>BLOG</a></li>
                                     <li class="menu-item"><a href="contact.php" class="item-link link text-caption"><span>05 /</span>CONTACT</a></li>
                                 </ul>
                             </div>

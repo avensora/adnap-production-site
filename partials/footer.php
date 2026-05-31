@@ -44,7 +44,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="img-agency">
-                        <p class="effectFade fadeZoom" style="font-size:clamp(80px,16vw,220px);font-weight:900;opacity:0.08;white-space:nowrap;line-height:1;margin:0;letter-spacing:-0.04em;">ADNAP</p>
+                        <img src="assets/images/logo/adnap-logo.png" alt="ADNAP" class="effectFade fadeZoom" style="width:clamp(280px,55vw,780px);opacity:0.08;display:block;">
                     </div>
                     <div class="bottom">
                         <p class="text-nocopy text-caption fw-medium letter-space--1">

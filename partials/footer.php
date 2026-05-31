@@ -42,15 +42,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                <div class="footer-wordmark-area">
+                    <img src="assets/images/logo/adnap-logo.png" alt="ADNAP" class="effectFade fadeZoom footer-wordmark">
+                </div>
                 <div class="container">
-                    <div class="img-agency">
-                        <img src="assets/images/logo/adnap-logo.png" alt="ADNAP" class="effectFade fadeZoom" style="width:clamp(280px,55vw,780px);opacity:0.08;display:block;filter:brightness(0) invert(1);">
-                    </div>
                     <div class="bottom">
                         <p class="text-nocopy text-caption fw-medium letter-space--1">
                             © ADNAP DIGITAL AGENCY
                         </p>
-
                         <a href="#" class="action-go-top tf-link-icon link text-caption fw-medium letter-space--1">
                             BACK TO TOP
                             <i class="icon icon-arrow-long-right"></i>

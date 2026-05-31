@@ -5,6 +5,17 @@ $_isService = ($_cp === 'services.php' || strpos($_cp, 'service-') === 0);
 $_isPortfolio = ($_cp === 'portfolio.php');
 $_isBlog    = (strpos($_cp, 'blog-') === 0);
 $_isContact = ($_cp === 'contact.php');
+
+// Sub-page active states
+$_isSvcAll    = ($_cp === 'services.php');
+$_isSvc2d     = ($_cp === 'service-2d-animation.php');
+$_isSvc3d     = ($_cp === 'service-3d-animation.php');
+$_isSvcBrand  = ($_cp === 'service-branding.php');
+$_isSvcAI     = ($_cp === 'service-ai-video.php');
+$_isSvcWeb    = ($_cp === 'service-web-design.php');
+$_isBlogTwo   = ($_cp === 'blog-two-columns.php');
+$_isBlogThree = ($_cp === 'blog-three-columns.php');
+$_isBlogStd   = ($_cp === 'blog-standard.php');
 ?>
         <!-- Header -->
         <header class="tf-header<?php if (empty($header_overlap)) echo ' m-0'; ?>">
@@ -20,8 +31,23 @@ $_isContact = ($_cp === 'contact.php');
                             <div class="box-navigation">
                                 <ul class="nav-menu-main">
                                     <li class="menu-item"><a href="about.php" class="item-link link text-caption<?php echo $_isAbout ? ' active' : ''; ?>"><span>01 /</span>ABOUT</a></li>
-                                    <li class="menu-item"><a href="services.php" class="item-link link text-caption<?php echo $_isService ? ' active' : ''; ?>"><span>02 /</span>SERVICES</a></li>
-                                    <li class="menu-item"><a href="portfolio.php" class="item-link link text-caption<?php echo $_isPortfolio ? ' active' : ''; ?>"><span>03 /</span>PORTFOLIO</a></li>
+                                    <li class="menu-item has-child">
+                                        <a href="services.php" class="item-link link text-caption<?php echo $_isService ? ' active' : ''; ?>"><span>02 /</span>SERVICES<i class="nav-chevron"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="services.php" class="<?php echo $_isSvcAll ? 'active' : ''; ?>">All Services</a></li>
+                                            <li><a href="service-2d-animation.php" class="<?php echo $_isSvc2d ? 'active' : ''; ?>">2D Animation</a></li>
+                                            <li><a href="service-3d-animation.php" class="<?php echo $_isSvc3d ? 'active' : ''; ?>">3D Animation</a></li>
+                                            <li><a href="service-branding.php" class="<?php echo $_isSvcBrand ? 'active' : ''; ?>">Branding</a></li>
+                                            <li><a href="service-ai-video.php" class="<?php echo $_isSvcAI ? 'active' : ''; ?>">AI Video</a></li>
+                                            <li><a href="service-web-design.php" class="<?php echo $_isSvcWeb ? 'active' : ''; ?>">Web Design</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item has-child">
+                                        <a href="portfolio.php" class="item-link link text-caption<?php echo $_isPortfolio ? ' active' : ''; ?>"><span>03 /</span>PORTFOLIO<i class="nav-chevron"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="portfolio.php" class="<?php echo $_isPortfolio ? 'active' : ''; ?>">All Work</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="menu-item"><a href="blog-two-columns.php" class="item-link link text-caption<?php echo $_isBlog ? ' active' : ''; ?>"><span>04 /</span>BLOG</a></li>
                                     <li class="menu-item"><a href="contact.php" class="item-link link text-caption<?php echo $_isContact ? ' active' : ''; ?>"><span>05 /</span>CONTACT</a></li>
                                 </ul>

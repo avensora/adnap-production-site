@@ -1,11 +1,23 @@
 <?php
 if (!isset($_cp)) {
-    $_cp        = basename($_SERVER['PHP_SELF']);
-    $_isAbout   = ($_cp === 'about.php');
-    $_isService = ($_cp === 'services.php' || strpos($_cp, 'service-') === 0);
+    $_cp          = basename($_SERVER['PHP_SELF']);
+    $_isAbout     = ($_cp === 'about.php');
+    $_isService   = ($_cp === 'services.php' || strpos($_cp, 'service-') === 0);
     $_isPortfolio = ($_cp === 'portfolio.php');
-    $_isBlog    = (strpos($_cp, 'blog-') === 0);
-    $_isContact = ($_cp === 'contact.php');
+    $_isBlog      = (strpos($_cp, 'blog-') === 0);
+    $_isContact   = ($_cp === 'contact.php');
+}
+if (!isset($_isSvcAll)) {
+    $_cp          = $_cp ?? basename($_SERVER['PHP_SELF']);
+    $_isSvcAll    = ($_cp === 'services.php');
+    $_isSvc2d     = ($_cp === 'service-2d-animation.php');
+    $_isSvc3d     = ($_cp === 'service-3d-animation.php');
+    $_isSvcBrand  = ($_cp === 'service-branding.php');
+    $_isSvcAI     = ($_cp === 'service-ai-video.php');
+    $_isSvcWeb    = ($_cp === 'service-web-design.php');
+    $_isBlogTwo   = ($_cp === 'blog-two-columns.php');
+    $_isBlogThree = ($_cp === 'blog-three-columns.php');
+    $_isBlogStd   = ($_cp === 'blog-standard.php');
 }
 ?>
     <!-- Mobile Menu -->
@@ -62,6 +74,14 @@ if (!isset($_cp)) {
                                             </div>
                                         </div>
                                     </a>
+                                    <ul class="mb-sub-nav">
+                                        <li><a href="services.php" class="<?php echo $_isSvcAll ? 'active' : ''; ?>">All Services</a></li>
+                                        <li><a href="service-2d-animation.php" class="<?php echo $_isSvc2d ? 'active' : ''; ?>">2D Animation</a></li>
+                                        <li><a href="service-3d-animation.php" class="<?php echo $_isSvc3d ? 'active' : ''; ?>">3D Animation</a></li>
+                                        <li><a href="service-branding.php" class="<?php echo $_isSvcBrand ? 'active' : ''; ?>">Branding</a></li>
+                                        <li><a href="service-ai-video.php" class="<?php echo $_isSvcAI ? 'active' : ''; ?>">AI Video</a></li>
+                                        <li><a href="service-web-design.php" class="<?php echo $_isSvcWeb ? 'active' : ''; ?>">Web Design</a></li>
+                                    </ul>
                                 </div>
                             </li>
                             <li>

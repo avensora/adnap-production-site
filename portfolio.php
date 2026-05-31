@@ -331,6 +331,81 @@ $page_description = 'Explore ADNAP\'s portfolio of 2D & 3D animation, branding, 
                         </div>
                     </a>
 
+                    <!-- Pulsar — 2D Animation -->
+                    <a href="#" class="wg-work effectFade fadeUp no-div">
+                        <div class="work-image">
+                            <img loading="lazy" src="assets/images/section/award-2.jpg" alt="Pulsar 2D Animation">
+                        </div>
+                        <div class="work-content">
+                            <div class="work_top">
+                                <h5 class="letter-space--2">Pulsar_</h5>
+                                <ul class="tf-list vertical text-end">
+                                    <li class="text-white-64">Industry</li>
+                                    <li>SaaS</li>
+                                    <li>Productivity</li>
+                                </ul>
+                            </div>
+                            <div class="work_bottom">
+                                <ul class="tf-list vertical">
+                                    <li class="text-white-64">Services</li>
+                                    <li>2D Animation</li>
+                                    <li>Motion Design</li>
+                                </ul>
+                                <h5 class="letter-space--2">2025</h5>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Axiom — 3D Product Animation -->
+                    <a href="#" class="wg-work effectFade fadeUp no-div">
+                        <div class="work-image">
+                            <img loading="lazy" src="assets/images/section/award-3.jpg" alt="Axiom 3D Animation">
+                        </div>
+                        <div class="work-content">
+                            <div class="work_top">
+                                <h5 class="letter-space--2">Axiom_</h5>
+                                <ul class="tf-list vertical text-end">
+                                    <li class="text-white-64">Industry</li>
+                                    <li>Consumer</li>
+                                    <li>Hardware</li>
+                                </ul>
+                            </div>
+                            <div class="work_bottom">
+                                <ul class="tf-list vertical">
+                                    <li class="text-white-64">Services</li>
+                                    <li>3D Animation</li>
+                                    <li>Product Visualization</li>
+                                </ul>
+                                <h5 class="letter-space--2">2025</h5>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Genvue — AI Video Production -->
+                    <a href="#" class="wg-work effectFade fadeUp no-div">
+                        <div class="work-image">
+                            <img loading="lazy" src="assets/images/section/award-4.jpg" alt="Genvue AI Video">
+                        </div>
+                        <div class="work-content">
+                            <div class="work_top">
+                                <h5 class="letter-space--2">Genvue_</h5>
+                                <ul class="tf-list vertical text-end">
+                                    <li class="text-white-64">Industry</li>
+                                    <li>EdTech</li>
+                                    <li>Media</li>
+                                </ul>
+                            </div>
+                            <div class="work_bottom">
+                                <ul class="tf-list vertical">
+                                    <li class="text-white-64">Services</li>
+                                    <li>AI Video</li>
+                                    <li>Script & Production</li>
+                                </ul>
+                                <h5 class="letter-space--2">2025</h5>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </section>

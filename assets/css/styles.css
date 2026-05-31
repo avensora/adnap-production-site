@@ -2020,23 +2020,64 @@ header.header-sticky {
 .sub-menu {
   position: absolute;
   top: calc(100% + 20px);
-  background-color: rgba(15, 15, 15, 0.9);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px 0px;
-  min-width: 150px;
-  left: -31px;
-  border-radius: 8px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  background-color: rgba(10, 10, 10, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--white-8);
+  min-width: 180px;
+  left: -20px;
+  border-radius: 4px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  padding: 12px 0px;
+  pointer-events: none;
+  transform: translateY(8px);
+  padding: 8px 0;
+}
+.menu-item:hover .sub-menu {
+  pointer-events: all;
 }
 .sub-menu li > a {
-  padding: 4px 16px;
+  display: block;
+  padding: 7px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white-50);
+  white-space: nowrap;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+.sub-menu li > a:hover,
+.sub-menu li > a.active {
+  color: var(--primary);
+  padding-left: 24px;
+}
+.sub-menu li + li {
+  border-top: 1px solid var(--white-8);
+}
+
+/* Dropdown chevron */
+.nav-chevron {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  margin-left: 5px;
+  opacity: 0.45;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.menu-item:hover.has-child > a .nav-chevron {
+  transform: translateY(1px) rotate(225deg);
+  opacity: 1;
 }
 
 /*------------ Blog ---------------- */
@@ -7481,4 +7522,159 @@ button.animate-btn::after,
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/* ====================================================
+   LIGHT THEME
+   ==================================================== */
+
+/* 1. White base */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* 2. Globally remap opacity vars so text/borders are dark on white bg */
+:root {
+  --white-4:  rgba(0, 0, 0, 0.03);
+  --white-8:  rgba(0, 0, 0, 0.05);
+  --white-16: rgba(0, 0, 0, 0.09);
+  --white-32: rgba(0, 0, 0, 0.18);
+  --white-40: rgba(0, 0, 0, 0.26);
+  --white-50: rgba(0, 0, 0, 0.38);
+  --white-64: rgba(0, 0, 0, 0.52);
+}
+
+/* 3. Restore white vars inside elements that stay dark */
+.tf-footer,
+.offcanvas-menu,
+.wg-work .work-content,
+.wg-process,
+.whatsapp-float,
+#goTop,
+.preloader {
+  --white-4:  rgba(255, 255, 255, 0.04);
+  --white-8:  rgba(255, 255, 255, 0.08);
+  --white-16: rgba(255, 255, 255, 0.16);
+  --white-32: rgba(255, 255, 255, 0.32);
+  --white-40: rgba(255, 255, 255, 0.40);
+  --white-50: rgba(255, 255, 255, 0.50);
+  --white-64: rgba(255, 255, 255, 0.64);
+}
+
+/* 4. Footer: dark bg, white text */
+.tf-footer {
+  background-color: #000000;
+  color: #ffffff;
+}
+.tf-footer a {
+  color: #ffffff;
+}
+
+/* 5. Work card overlay text stays white (gradient overlay is dark) */
+.wg-work .work-content {
+  color: #ffffff;
+}
+
+/* 6. Sticky header: white bg, subtle shadow */
+header.header-sticky {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 7. On hero pages (index.php — no .m-0 class), nav text is white over dark video */
+header.tf-header:not(.m-0):not(.header-sticky) .item-link {
+  color: rgba(255, 255, 255, 0.90);
+}
+header.tf-header:not(.m-0):not(.header-sticky) .item-link span {
+  color: rgba(255, 255, 255, 0.50);
+}
+header.tf-header:not(.m-0):not(.header-sticky) .header-contact a,
+header.tf-header:not(.m-0):not(.header-sticky) .header-contact p {
+  color: rgba(255, 255, 255, 0.64);
+}
+header.tf-header:not(.m-0):not(.header-sticky) .btn-mobile-menu {
+  color: rgba(255, 255, 255, 0.90);
+}
+header.tf-header:not(.m-0):not(.header-sticky) .nav-chevron {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* 8. Contact button: dark on non-hero header and sticky */
+header.tf-header.m-0 .tf-btn,
+header.header-sticky .tf-btn {
+  color: #000000;
+  border-color: #000000;
+}
+header.tf-header.m-0 .tf-btn::before,
+header.header-sticky .tf-btn::before {
+  background-color: #000000;
+}
+header.tf-header.m-0 .tf-btn:hover,
+header.header-sticky .tf-btn:hover {
+  color: #ffffff;
+}
+
+/* 9. Sub-menu: light bg on white page */
+.sub-menu {
+  background-color: rgba(252, 252, 252, 0.98);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10), 0 0 0 1px rgba(0, 0, 0, 0.07);
+}
+.sub-menu li > a {
+  color: rgba(0, 0, 0, 0.50);
+}
+.sub-menu li + li {
+  border-top-color: rgba(0, 0, 0, 0.06);
+}
+.sub-menu li > a:hover,
+.sub-menu li > a.active {
+  color: var(--primary);
+}
+
+/* 10. GoTop: keep dark, update shadow for light page */
+#goTop {
+  background: #000000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 11. Form inputs: dark text on white */
+form textarea,
+form input[type=text],
+form input[type=password],
+form input[type=datetime],
+form input[type=datetime-local],
+form input[type=date],
+form input[type=month],
+form input[type=time],
+form input[type=week],
+form input[type=number],
+form input[type=email],
+form input[type=url],
+form input[type=search],
+form input[type=tel],
+form input[type=color] {
+  color: #000000;
+}
+
+/* ====================================================
+   END LIGHT THEME
+   ==================================================== */
+
+/* Mobile sub-nav (inside offcanvas menu) */
+.mb-sub-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  padding: 4px 0 16px;
+}
+.mb-sub-nav li a {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white-40);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+.mb-sub-nav li a:hover,
+.mb-sub-nav li a.active {
+  color: var(--primary);
+}
